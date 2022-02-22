@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: berdogan  <berdogan@student.42kocaeli.com  +#+  +:+       +#+        */
+/*   By: berdogan <berdogan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 05:28:49 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/22 20:24:13 by berdogan         ###   ########.fr       */
+/*   Created: 2022/02/22 20:18:21 by berdogan          #+#    #+#             */
+/*   Updated: 2022/02/22 20:38:48 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_isalpha(int c)
+int	ft_isupper(int c)
 {
-	if (ft_isupper(c) || ft_islower(c))
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }
