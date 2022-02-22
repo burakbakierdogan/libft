@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burak <berdogan@student.42kocaeli.com      +#+  +:+       +#+        */
+/*   By: berdogan  <berdogan@student.42kocaeli.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 05:28:49 by burak             #+#    #+#             */
-/*   Updated: 2022/02/22 05:42:43 by burak            ###   ########.fr       */
+/*   Created: 2022/02/22 05:28:49 by berdogan          #+#    #+#             */
+/*   Updated: 2022/02/22 14:05:20 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
