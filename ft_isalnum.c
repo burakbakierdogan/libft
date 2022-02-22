@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: berdogan  <berdogan@student.42kocaeli.com  +#+  +:+       +#+        */
+/*   By: berdogan <berdogan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 05:28:49 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/22 15:55:09 by berdogan         ###   ########.fr       */
+/*   Created: 2022/02/22 15:21:22 by berdogan          #+#    #+#             */
+/*   Updated: 2022/02/22 15:46:40 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-		return (1);
+	if (ft_isdigit(c) || ft_isalpha(c))
+		return(1);
 	return (0);
 }
