@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berdogan <berdogan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 22:46:47 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/23 03:08:19 by berdogan         ###   ########.fr       */
+/*   Created: 2022/02/23 00:45:52 by berdogan          #+#    #+#             */
+/*   Updated: 2022/02/23 03:07:15 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_tolower(int c)
+int	ft_isspace(int c)
 {
-	if (ft_islower(c))
-		c += 32;
-	return (c);
+	if (c == ' ' || c == '\n' || '\t'
+		|| '\v' || '\f'
+		||'\r')
+		return (1);
+	return (0);
 }

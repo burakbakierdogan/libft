@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berdogan <berdogan@student.42kocaeli.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 22:46:47 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/23 03:08:19 by berdogan         ###   ########.fr       */
+/*   Created: 2022/02/23 00:56:00 by berdogan          #+#    #+#             */
+/*   Updated: 2022/02/23 03:07:46 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_tolower(int c)
+int	ft_atoi(const char *nptr)
 {
-	if (ft_islower(c))
-		c += 32;
-	return (c);
+	
 }
