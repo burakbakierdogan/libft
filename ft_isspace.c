@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: berdogan <berdogan@student.42kocaeli.      +#+  +:+       +#+        */
+/*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 00:45:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/23 03:07:15 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/02/23 21:55:09 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isspace(int c)
 {
-	if (c == ' ' || c == '\n' || '\t'
-		|| '\v' || '\f'
-		||'\r')
+	if (c == ' ' || c == '\n' || c == '\t'
+		|| c == '\v' || c == '\f'
+		|| c == '\r')
 		return (1);
 	return (0);
 }
