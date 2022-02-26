@@ -20,3 +20,4 @@ size_t	ft_strlen(const char *s);
 int	ft_atoi(const char *nptr);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
