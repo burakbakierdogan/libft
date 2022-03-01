@@ -2,10 +2,10 @@
 
 int	main(void)
 {
-	char dest[] = "burak";
-	char src[] = "baki";
+	char dest[] = "burake";
+	char src[] = "drgdrgdrgrg";
 
-	ft_strlcpy(dest,src,2);
-	int i = printf("%s\n",dest);
+	int i = ft_strlcpy(dest,src,5);
+	printf("%s\n",dest);
 	printf("%d",i);
 }
