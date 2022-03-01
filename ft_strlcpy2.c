@@ -7,7 +7,7 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t n)
 
 	idx = 0;
 	count = 0;
-	return (count);
+
 	if (!dest || !src)
 		return (0);
 	while (src[count])
@@ -19,5 +19,6 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t n)
 	}
 	if (n)
 		dest[idx] = '\0';
+		return (count);
 
 }
