@@ -3,8 +3,8 @@
 #include <libft.h>
 int main( void )
 {
-    char cdizi1[] = "Bilgisayar";
-    char cdizi2[] = "Programlar33333232324";
+    char cdizi1[] = "Burak";
+    char cdizi2[] = "urak";
 
     printf("cdizi1 bellek içeriği: %s, cdizi2 bellek içeriği: %s\n", cdizi1, cdizi2);
 

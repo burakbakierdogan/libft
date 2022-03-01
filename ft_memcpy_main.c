@@ -1,17 +1,11 @@
 #include <libft.h>
 int main ()
 {
-  char str1[] = "Geeks"; 
-  char str2[] = "Quiz"; 
- 
-  puts("str1 before memcpy ");
-  puts(str1);
- 
-  /* Copies contents of str2 to str1 */
- ft_memcpy (str1, str2, sizeof(str2));
- 
-  puts("\nstr1 after memcpy ");
-  puts(str1);
- 
-  return 0;
+ char a[] = "burak";
+ char *src;
+ src = a;
+ char *dest = src + 1; // src +1 = urak'\0'
+ printf("ft_memcpy oncesi SRC = %s\nft_memcpy oncesi DEST = %s\n", src, dest);
+ ft_memcpy(dest,src,4);
+ printf("ft_memcpy sonrasi SRC = %s\nft_memcpy sonrasi DEST = %s\n", src, dest);
 }
