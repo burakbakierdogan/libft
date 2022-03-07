@@ -33,3 +33,5 @@ int	main(void)
 		printf fonksiyonuna tt[3] adresinden baslayarak her 8 bitlik bloktaki binary
 		kodunu ascii'ye gore karaktere cevir onu ekrana yazdir adresi 1 arttir
 		ve yine ayni islemi yap. taa ki null ifadesi gorene kadar. */
+
+}
