@@ -18,9 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int	i;
 
 	i = 0;
-	substr = (unsigned char *) malloc(3);
-	//ft_strlcpy (substr, (s + i), len);
-
+	if (!s || !(substr = (char *) malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 while (len--)
 	{
 		substr[i] = s[start];
