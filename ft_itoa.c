@@ -25,20 +25,24 @@ int	ft_sizer(int n)
 	}
 	return (size);
 }
-char	ft_reverse(char *str)
+char	*ft_reverse(char *str)
 {
-	int	i;
-	int	len;
-	char	temp[ft_strlen(str)];
+	int	size;
+	int	index;
 
-	i = 0;
-	len = ft_strlen(str);
-	while (len--)
-		temp[i++] = str[i++];
-	len = ft_strlen(str);
-	i = 0;
-	while (len > 0)
-		str[i++] = temp[len--];
+	index = 0;
+	size = ft_strlen(str);
+	char *buffer;
+	buffer = (char *) malloc (size+1);
+	size -=1;
+	while (size >= 0)
+	{
+		*(buffer + index) = *(str + size);
+		index++;
+		size--;
+	}
+	*(buffer + index) = '\0';
+	return (buffer);
 }
 char	*ft_itoa(int n)
 {
@@ -63,6 +67,6 @@ char	*ft_itoa(int n)
 		str[i++] = '-';
 	}
 	str[i] = '\0';
-	ft_reverse(str);
+	str = ft_reverse(str);
 	return (str);
 }

@@ -2,7 +2,7 @@
 
 int	main (void)
 {
-	int a = -4343623;
+	int a = 0;
 	char *b;
 	b = ft_itoa(a);
 	printf("%s",b);
