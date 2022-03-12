@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	number = n;
 	if (!(str = (char *) malloc
 		(ft_sizer(n) +1 * sizeof(char))))
-		return (NULL);
+			return (NULL);
 	if (n == 0)
 	{
 		str[i] = 48;
@@ -67,6 +67,6 @@ char	*ft_itoa(int n)
 	}
 	n = n < 0 ? str[i++] = '-' : n;
 	str[i] = '\0';
-	str = ft_reverse(str);
+	str = ft_reverse (str);
 	return (str);
 }
