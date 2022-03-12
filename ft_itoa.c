@@ -12,33 +12,57 @@
 
 #include <libft.h>
 
+int	ft_sizer(int n)
+{
+	int	size;
+
+	if (n < 0)
+		n *=-1;
+	while ((n / 10) > 0)
+	{
+		n /= n;
+		size++;
+	}
+	return (size);
+}
+char	ft_reverse(char *str)
+{
+	int	i;
+	int	len;
+	char	temp[ft_strlen(str)];
+
+	i = 0;
+	len = ft_strlen(str);
+	while (len--)
+		temp[i++] = str[i++];
+	len = ft_strlen(str);
+	i = 0;
+	while (len > 0)
+		str[i++] = temp[len--];
+}
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int	i;
+	int number;
 
 	i = 0;
-	if (!(char str = (char *) malloc (sizeof(char) * 3)))
+	number = n;
+	if (!(str = (char *) malloc (ft_sizer(n) * sizeof(char))))
 		return (NULL);
-	if (n == 2147483647)
+	number = n;
+	if (number < 0)
+		number *= -1;
+	while (number > 0)
 	{
-		str = "2147483647";
-		return (str);
+		str[i++] = (number%10) + 48;
+		number /= 10;
 	}
 	if (n < 0)
 	{
-		n = (n * -1);
-		str[i] = '-';
-		i++;
+		str[i++] = '-';
 	}
-	if (n < 10)
-	{
-		str[i] = (48 + n);
-		i++;
-		return (str);
-	}
-	if (n > 10)
-	{
-		n = 
-	}
+	str[i] = '\0';
+	ft_reverse(str);
+	return (str);
 }
