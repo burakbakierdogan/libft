@@ -17,7 +17,7 @@ int	ft_sizer(int n)
 	int	size;
 
 	if (n < 0)
-		n *=-1;
+		n *= -1;
 	while ((n / 10) > 0)
 	{
 		n /= n;
