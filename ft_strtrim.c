@@ -14,5 +14,22 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	
+	int	index;
+	size_t	size;
+	size_t	ssize;
+	char *temp;
+
+	index = 0;
+	size = ft_strlen (s1);
+	ssize	= ft_strlen (set);
+	if (!(temp = (char *) malloc (sizeof(char) * size)))
+		return (NULL);
+	ft_memcpy(temp,s1,size+1);
+	if (ft_strncmp (temp, set, ssize) == 0)
+		temp = temp + ssize;
+	if (ft_strncmp ((temp + size - ssize),set, ssize) == 0)
+	{
+		temp[size - ssize] = '\0';
+	}
+	return (temp);
 }

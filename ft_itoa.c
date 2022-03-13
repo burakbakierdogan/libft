@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-int	ft_sizer(int n)
+static	int	ft_sizer(int n)
 {
 	int	size;
 
@@ -25,7 +25,7 @@ int	ft_sizer(int n)
 	}
 	return (size);
 }
-char	*ft_reverse(char *str)
+static	char	*ft_reverse(char *str)
 {
 	int	size;
 	int	index;
