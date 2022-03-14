@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 07:35:14 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/08 07:35:14 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/14 11:44:21 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc (nmemb*size);
+	ptr = malloc (nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr,nmemb*size);
+	ft_bzero (ptr, nmemb * size);
 	return (ptr);
 }

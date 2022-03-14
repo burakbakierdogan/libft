@@ -1,21 +1,40 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr4.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/03 08:55:48 by berdogan          #+#    #+#             */
+/*   Updated: 2022/03/14 11:36:38 by berdogan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-** ft_strnstr - locate a substring in a string
-*/
+#include <libft.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t blen)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	size_t	llen;
+	int	i;
+	int	j;
+	int	t;
 
-	if (*little == '\0')
-		return ((char *)big);
-	llen = ft_strlen(little);
-	while (*big && blen-- >= llen)
+	i = -1;
+	j = 0;
+	t = 0;
+	if (!needle)
+		return ((char *)haystack);
+	while (++i < n)
 	{
-		if (*big == *little && ft_strncmp(big, little, llen) == 0)
-			return ((char *)big);
-		big++;
+		while (t < ft_strlen(needle))
+		{
+			if (haystack[j + i] == needle[j])
+				j++;
+			if (j == ft_strlen(needle))
+				return ((char *) &haystack[i]);
+			t++;
+		}
+		j = 0;
+		t = 0;
 	}
 	return (0);
 }

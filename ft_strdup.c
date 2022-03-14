@@ -6,16 +6,16 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:33:33 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/09 14:33:33 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/14 11:45:42 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strdup (const char *str)
+char	*ft_strdup(const char *str)
 {
 	char	ptr;
-	int	i;
+	int		i;
 
 	i = 0;
 	ptr = (char *) malloc (sizeof(char) * (ft_strlen(str) + 1));

@@ -2,10 +2,8 @@
 
 int	main (void)
 {
-	int a = 98769858;
-	char *z;
+	int a = 0;
 	char *b;
 	b = ft_itoa(a);
 	printf("%s\n",b);
-	free (z);
 }

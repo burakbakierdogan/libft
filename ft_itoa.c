@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:09:40 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/10 14:09:40 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/14 12:36:09 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,18 @@ char	*ft_itoa(int n)
 		str[i+1] = '\0';
 		return (str);
 	}
-	n = number < 0 ? number *= -1: n;
+	if (number < 0)
+		number *= -1; 
 	while (number > 0)
 	{
 		str[i++] = (number%10) + 48;
 		number /= 10;
 	}
-	n = n < 0 ? str[i++] = '-' : n;
+	if ( n < 0)
+	{
+		str[i] = '-';
+		i++;
+	}
 	str[i] = '\0';
 	str = ft_reverse (str);
 	return (str);
