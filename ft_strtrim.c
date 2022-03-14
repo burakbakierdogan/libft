@@ -27,6 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_memcpy(temp,s1,size+1);
 	if (ft_strncmp (temp, set, ssize) == 0)
 		temp = temp + ssize;
+	size = ft_strlen(temp);
 	if (ft_strncmp ((temp + size - ssize),set, ssize) == 0)
 	{
 		temp[size - ssize] = '\0';
