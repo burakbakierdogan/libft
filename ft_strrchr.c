@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 04:25:14 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 04:25:14 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/14 11:20:39 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	a;
-	int	size;
-	char	*ptr;
+	int				size;
+	char			*ptr;
 
 	size = ft_strlen(s);
 	ptr = (char *) s;

@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 09:02:23 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 10:59:56 by berdogan         ###   ########.fr       */
+/*   Created: 2022/03/14 10:21:23 by berdogan          #+#    #+#             */
+/*   Updated: 2022/03/14 10:22:48 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, unsigned char))
 {
-	int	i;
-
-	i = 0;
-	if (!dest || !src)
-		return (0);
-	if (n)
-	{
-		while (--n && src[i])
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (ft_strlen(src));
+	
 }

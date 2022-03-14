@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 15:12:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/02/27 15:12:52 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/14 11:23:44 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	i = 0;
 	res = 0;
-	while (n-- && (s1[i] || s2[i]) )
+	while (n-- && (s1[i] || s2[i]))
 	{
 		if (s1[i] == s2[i])
-			{
-				i++;
-			}
+		{
+			i++;
+		}
 		else
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
 	return (0);
 }
