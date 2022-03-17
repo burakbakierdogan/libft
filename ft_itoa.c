@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:09:40 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 14:19:33 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/17 11:56:29 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ static	int	ft_sizer(int n)
 	}
 	return (size);
 }
+
 static	char	*ft_reverse(char *str)
 {
-	int	size;
-	int	index;
+	int		size;
+	int		index;
+	char	*buffer;
 
 	index = 0;
 	size = ft_strlen (str);
-	char *buffer;
 	buffer = (char *) malloc (sizeof(char) * size + 1);
 	if (!buffer)
 		return (NULL);
@@ -42,6 +43,7 @@ static	char	*ft_reverse(char *str)
 	*(buffer + index) = '\0';
 	return (buffer);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -62,10 +64,10 @@ char	*ft_itoa(int n)
 		number *= -1;
 	while (number > 0)
 	{
-		str[i++] = (number%10) + 48;
+		str[i++] = (number % 10) + 48;
 		number /= 10;
 	}
-	if ( n < 0)
+	if (n < 0)
 		str[i++] = '-';
 	str[i] = '\0';
 	return (ft_reverse (str));
