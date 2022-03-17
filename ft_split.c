@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 06:22:51 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/17 12:24:02 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,13 @@ static	int	ft_counter(char const *s, char const *s2)
 		}
 		s++;
 	}
-	return(i);
+	return (i);
+}
+
+static	int	ft_sizer(char const *str, char const *str2, int c)
+{
+	int i = 0;
+	return	i;
 }
 
 char	**ft_split(char const *s, char c)
@@ -74,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (cpy[i] == '\0' && cpy[i + 1] != '\0')
 		{
-			*(str + p++) = (cpy + (i+1));
+			*(str + p++) = (cpy + (i + 1));
 			lmt--;
 		}
 		i++;
