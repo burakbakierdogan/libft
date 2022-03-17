@@ -33,12 +33,12 @@ static	char	*ft_reverse(char *str)
 	index = 0;
 	size = ft_strlen (str);
 	char *buffer;
-	buffer = (char *) malloc (size + 1);
+	buffer = (char *) malloc (sizeof(char) * size + 1);
+	if (!buffer)
+		return (NULL);
 	size -= 1;
 	while (size >= 0)
-	{
 		*(buffer + index++) = *(str + size--);
-	}
 	*(buffer + index) = '\0';
 	return (buffer);
 }
@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	number = n;
-	str = (char *) malloc (ft_sizer(n) +1 * sizeof(char));
+	str = (char *) malloc (ft_sizer(n) + 1 * sizeof (char));
 	if (!str)
 		return (NULL);
 	if (n == 0)
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 		return (str);
 	}
 	if (number < 0)
-		number *= -1; 
+		number *= -1;
 	while (number > 0)
 	{
 		str[i++] = (number%10) + 48;
@@ -68,5 +68,5 @@ char	*ft_itoa(int n)
 	if ( n < 0)
 		str[i++] = '-';
 	str[i] = '\0';
-    return (ft_reverse (str));
+	return (ft_reverse (str));
 }

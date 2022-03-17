@@ -2,8 +2,11 @@
 
 int	main(void)
 {
-	char *a= "burak";
-	char b = 'u';
-	char c[6] = ft_split(a,b);
-	printf("%s", c);
+	char **s;
+	char *k;
+	k = "aaaburakbakierdoganaaan";
+	s = &k;
+	char a = 'a';
+	s = ft_split(k,a);
+	printf("%s", *(s+5));
 }
