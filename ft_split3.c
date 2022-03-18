@@ -70,5 +70,6 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
+	parr[j] = NULL;
 	return (parr);
 }
