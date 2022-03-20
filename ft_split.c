@@ -12,79 +12,69 @@
 
 #include <libft.h>
 
-static	char	*ft_newstrings(char const *str, char c, int n)
+static	char	*ft_newstring(char const *s1, char c)
 {
-	char	*nstr;
+	char	*str;
 	int		i;
-	int		size;
+	int		j;
 
-	size = ft_strlen(str);
 	i = 0;
-	nstr = (char *) malloc (n * sizeof(char));
-	if (!nstr)
+	j = 0;
+	str = (char *) malloc (ft_strlen(s1) + 2 * sizeof(char));
+	if (!str)
 		return (NULL);
-	ft_memmove(nstr, str, n);
-	while (i <= size)
+	ft_bzero(str, ft_strlen(s1) + 2);
+	while (i < ft_strlen(s1))
 	{
-		if (nstr[i] == c)
-			nstr[i] = '\0';
-		i++;
-	}
-	i = 0;
-	while (nstr[i] == '\0')
-		nstr++;
-	return (nstr);
-}
-
-static	int	ft_counter(char const *s, char const *s2)
-{
-	int	i;
-	int	n;
-
-	n = ft_strlen(s2);
-	i = 0;
-	while (n--)
-	{
-		if (*s == '\0' && *(s + 1) != '\0')
-		{
+		while (s1[i] == c)
 			i++;
+		while (s1[i] != c && s1[i])
+		{
+			str[j++] = s1[i++];
+			if (s1[i] == c)
+			{
+				str[j++] = '\0';
+				break;
+			}
 		}
-		s++;
 	}
-	return (i);
+	return (str);
 }
 
-static	int	ft_sizer(char const *str, char const *str2, int c)
+static	int	ft_sizer(char const *s)
 {
-	int i = 0;
-	return	i;
+	int	size;
+
+	size = 0;
+	while (s[size])
+		{
+			size++;
+			if (size == '\0')
+				size++;
+		}
+	return (size + 1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	char	*cpy;
 	int		i;
-	int		lmt;
-	int		p;
+	int		j;
+	char	**parr;
+	char	*cpy;
 
 	i = 0;
-	p = 0;
-	str = (char **) malloc ((lmt + 1) * sizeof(void **));
-	if (!str)
+	j = 0;
+	cpy = ft_newstring(s, c);
+	parr = (char **) malloc (ft_sizer(cpy) * sizeof(char **));
+	if (!parr)
 		return (NULL);
-	cpy = ft_newstrings(s, c, (ft_strlen(s)+1));
-	str[p++] = cpy;
-	lmt = ft_counter(cpy, s);
-	while (i < ft_strlen(s) && lmt > 0)
+	while (cpy[i] != 0)
 	{
-		if (cpy[i] == '\0' && cpy[i + 1] != '\0')
-		{
-			*(str + p++) = (cpy + (i + 1));
-			lmt--;
-		}
+		parr[j++] = cpy + i;
 		i++;
+		if (cpy[i] == 0)
+			i++;
 	}
-	str[p] = NULL;
-	return (str);
+	parr[j] = NULL;
+	return (parr);
 }
