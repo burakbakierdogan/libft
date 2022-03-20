@@ -5,9 +5,9 @@ int	main(void)
 {
 	char **s;
 	char  *k;
-	k  = "aaburaakkllaalm";
+	k  = "bbbbbbb";
 	s = &k;
 	char a = 'a';
 	s = ft_split(k,a);
-	printf("%s", *(s));
+	printf("%s", *(s+2));
 }
