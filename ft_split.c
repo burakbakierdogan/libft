@@ -20,10 +20,10 @@ static	char	*ft_newstring(char const *s1, char c)
 
 	i = 0;
 	j = 0;
-	str = (char *) malloc (ft_strlen(s1) + 2 * sizeof(char));
+	str = (char *) malloc (ft_strlen(s1) +1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_bzero(str, ft_strlen(s1) + 2 );
+	ft_bzero(str, ft_strlen(s1) +1 );
 	while (i < ft_strlen(s1))
 	{
 		while (s1[i] == c)
@@ -41,6 +41,16 @@ static	char	*ft_newstring(char const *s1, char c)
 	return (str);
 }
 
+static	int	ft_sizer(char const *s)
+{
+	int	size;
+
+	size = 0;
+	while (s[size] != 0 || s[size + 1] != 0)
+			size++;
+	return (size + 1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -51,13 +61,18 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	cpy = ft_newstring(s, c);
-	parr = (char **) malloc (1 * sizeof(char **));
+	parr = (char **) malloc (ft_sizer(cpy) * sizeof(char **));
 	if (!parr)
 		return (NULL);
-	for (int t = 0; t < 10; t++)
-		printf("%d\n", cpy[t]);
-
-
+	parr[j++] = cpy;
+	while (cpy[i] != 0 || cpy[i+1] != 0)
+	{
+		if (cpy[i] == 0)
+		{
+			parr[j++] = cpy + i+1;
+		}
+		i++;
+	}
 	parr[j] = NULL;
 	return (parr);
 }
