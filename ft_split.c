@@ -65,11 +65,11 @@ char	**ft_split(char const *s, char c)
 	if (!parr)
 		return (NULL);
 	parr[j++] = cpy;
-	while (cpy[i] != 0 || cpy[i+1] != 0)
+	while (cpy[i] != 0 || cpy[i + 1] != 0)
 	{
-		if (cpy[i] == 0 && cpy[i+1] != 0)
+		if (cpy[i] == 0 && cpy[i + 1] != 0)
 		{
-			parr[j++] = cpy + i+1;
+			parr[j++] = cpy + i + 1;
 		}
 		i++;
 	}
