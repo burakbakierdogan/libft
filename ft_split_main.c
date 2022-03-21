@@ -5,9 +5,10 @@ int	main(void)
 {
 	char **s;
 	char  *k;
-	k  = "aaabaaababbaabbbababa";
+	k = "UN_DEUX_TROIS";
 	s = &k;
-	char a = 'a';
+	char a = '_';
 	s = ft_split(k,a);
-	printf("%s", *(s+6));
+	for (int t = 0; t < 12; t++)
+	printf("%d : '%s'\n",t, *(s+ t));
 }

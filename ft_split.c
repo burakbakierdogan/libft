@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/17 12:24:02 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:32:47 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static	char	*ft_newstring(char const *s1, char c)
 	str = (char *) malloc (ft_strlen(s1) +1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_bzero(str, ft_strlen(s1) +1 );
+	ft_bzero(str, ft_strlen(s1) + 1);
 	while (i < ft_strlen(s1))
 	{
 		while (s1[i] == c)
@@ -34,7 +34,7 @@ static	char	*ft_newstring(char const *s1, char c)
 			if (s1[i] == c)
 			{
 				str[j++] = '\0';
-				break;
+				break ;
 			}
 		}
 	}
@@ -47,8 +47,42 @@ static	int	ft_sizer(char const *s)
 
 	size = 0;
 	while (s[size] != 0 || s[size + 1] != 0)
+		size++;
+	return (size);
+}
+
+static	int	ft_wordcount(char const *s)
+{
+	int	size;
+	int	i;
+
+	i = 0;
+	size = 1;
+	while (i < ft_sizer(s))
+	{
+		if (s[i] == 0 && s[i + 1] != 0)
 			size++;
+		i++;
+	}
 	return (size + 1);
+}
+
+static	int	ft_istring(char const *s, char c)
+{
+	int	i;
+	int	size;
+
+	i = 0;
+	size = ft_strlen(s);
+	if (s[i] == '\0')
+		return (0);
+	while (i < ft_strlen(s))
+	{
+		if (s[i] == c)
+			size--;
+		i++;
+	}
+	return (size);
 }
 
 char	**ft_split(char const *s, char c)
@@ -61,11 +95,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	cpy = ft_newstring(s, c);
-	parr = (char **) malloc (ft_sizer(cpy) * sizeof(char **));
+	parr = (char **) malloc (ft_wordcount(cpy) * sizeof(char *));
 	if (!parr)
 		return (NULL);
 	parr[j++] = cpy;
-	while (cpy[i] != 0 || cpy[i + 1] != 0)
+	while (i < ft_sizer(cpy) - 1)
 	{
 		if (cpy[i] == 0 && cpy[i + 1] != 0)
 		{
@@ -74,5 +108,7 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	parr[j] = NULL;
+	if (ft_istring(s, c) == 0)
+		return (parr + j);
 	return (parr);
 }
