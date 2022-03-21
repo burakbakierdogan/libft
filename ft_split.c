@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/21 15:32:47 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:11:31 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static	char	*ft_newstring(char const *s1, char c)
 
 	i = 0;
 	j = 0;
-	str = (char *) malloc (ft_strlen(s1) +1 * sizeof(char));
+	str = (char *) malloc (ft_strlen(s1) + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
 	ft_bzero(str, ft_strlen(s1) + 1);
