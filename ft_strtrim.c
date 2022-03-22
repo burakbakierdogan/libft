@@ -14,6 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	index;
 	size_t	size;
 	size_t	ssize;
 	char *temp;

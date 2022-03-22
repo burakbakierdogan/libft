@@ -15,7 +15,7 @@
 static	char	*ft_newstring(char const *s1, char c)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 	int		j;
 
 	i = 0;
@@ -41,7 +41,7 @@ static	char	*ft_newstring(char const *s1, char c)
 	return (str);
 }
 
-static	int	ft_sizer(char const *s)
+static	size_t	ft_sizer(char const *s)
 {
 	int	size;
 
