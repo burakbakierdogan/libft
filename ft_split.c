@@ -53,8 +53,8 @@ static	size_t	ft_sizer(char const *s)
 
 static	size_t	ft_wordcount(char const *s)
 {
-	int	size;
-	int	i;
+	int		size;
+	size_t	i;
 
 	i = 0;
 	size = 1;
