@@ -73,24 +73,74 @@ static	size_t	ft_newsize(char const *s, char c)
 
 /*int main (void)
 {
-	char const *str = "khhkkhkk";
+	char const *str = "khkk";
 	char c = 'k';
 	size_t total = ft_newsize(str,c);
 	printf("%d", total);
 }
 */
 
+static	size_t	ft_endrepeat(char const *s, char c)
+{
+	size_t	i;
+	size_t	total;
+
+	total = 0;
+	i = ft_strlen(s) - 1;
+	while (s[i] == c)
+	{
+		i--;
+		total++;
+	}
+	return (total);
+}
+
 static	char	*ft_newstring(char const *s, char c)
 {
 	char	*str;
-	int		index;
+	size_t	i;
+	size_t	j;
+	size_t	end;
 
-
-	str = (char *) malloc (ft_newsize(s, c) * sizeof(char));
-	ft_memset(str, '\0', ft_newsize(s, c));
-
+	i = 0;
+	j = 0;
+	str = (char *) malloc (ft_newsize(s, c) + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_bzero(str, ft_newsize(s, c) + 1);
+	while (s[i] == c)
+		i++;
+	end = ft_endrepeat(s, c);
+	while (i + end < ft_strlen(s))
+	{
+		if (str[i] != c)
+		{
+			str[j] = s[i];
+			i++;
+			j++;
+		}
+		while (str[i] == c )
+		{
+			if (ft_isrepeat(s + i, c) == 0)
+				{
+					str[j++] = '\0';
+				i++;
+				}
+			else
+			str[j++] = '\0';
+			i += ft_isrepeat(s + i, c) + 1;
+		}
+	}
+	return (str);
 }
-
+int main (void)
+{
+	char *ptr = "kkkkkk";
+	char *str = ft_newstring(ptr, 'k');
+	int k = ft_newsize(ptr, 'a');
+	for (int t = 0; t < k+2; t++)
+		printf("%d\n",*(str + t));
+}
 /*
 char	**ft_split(char const *s, char c)
 {
