@@ -14,12 +14,10 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	index;
 	size_t	size;
 	size_t	ssize;
 	char *temp;
 
-	index = 0;
 	size = ft_strlen (s1);
 	ssize	= ft_strlen (set);
 	if (!(temp = (char *) malloc (sizeof(char) * size)))
