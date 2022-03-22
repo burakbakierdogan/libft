@@ -9,6 +9,6 @@ int	main(void)
 	s = &k;
 	char a = '_';
 	s = ft_split(k,a);
-	for (int t = 0; t < 12; t++)
+	for (int t = 0; t < 16; t++)
 	printf("%d : '%s'\n",t, *(s+ t));
 }

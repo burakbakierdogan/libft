@@ -69,8 +69,8 @@ static	int	ft_wordcount(char const *s)
 
 static	int	ft_istring(char const *s, char c)
 {
-	int	i;
-	int	size;
+	size_t	i;
+	size_t	size;
 
 	i = 0;
 	size = ft_strlen(s);
@@ -87,7 +87,7 @@ static	int	ft_istring(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
+	size_t	i;
 	int		j;
 	char	**parr;
 	char	*cpy;

@@ -14,10 +14,10 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	int	i;
-	int	j;
-	int	k;
-	int	t;
+	size_t	i;
+	size_t	t;
+	size_t	j;
+	int		k;
 
 	i = 0;
 	j = 0;
