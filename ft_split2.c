@@ -68,7 +68,10 @@ static	size_t	ft_newsize(char const *s, char c)
 		temp[end--] = '\0';
 	size = ft_sizer(temp, c);
 	free (temp);
-	return (size + 1);
+	if (size != 0)
+		return (size + 1);
+	return (size);
+
 }
 
 /*int main (void)
@@ -80,7 +83,7 @@ static	size_t	ft_newsize(char const *s, char c)
 }
 */
 
-static	size_t	ft_endrepeat(char const *s, char c)
+static	size_t	ft_endR(char const *s, char c)
 {
 	size_t	i;
 	size_t	total;
@@ -94,39 +97,52 @@ static	size_t	ft_endrepeat(char const *s, char c)
 	}
 	return (total);
 }
+static	size_t	ft_startR(char const *s, char c)
+{
+	size_t	start;
+
+	start = 0;
+	while (s[start] == c)
+		start++;
+	return (start);
+}
+
+static	char	*ft_malloc(char *str, char const *s, char c)
+{
+	str = (char *) malloc (ft_newsize(s, c) + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_bzero(str, ft_newsize(s, c) + 1);
+	return (str);
+}
 
 static	char	*ft_newstring(char const *s, char c)
 {
 	char	*str;
 	size_t	i;
-	size_t	j;
 	size_t	end;
+	size_t	j;
 
-	i = 0;
 	j = 0;
-	str = (char *) malloc (ft_newsize(s, c) + 1 * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_bzero(str, ft_newsize(s, c) + 1);
-	while (s[i] == c)
-		i++;
-	end = ft_endrepeat(s, c);
+	i = ft_startR(s, c);
+	end = ft_endR(s,c);
+	str = ft_malloc(str, s, c);
 	while (i + end < ft_strlen(s))
 	{
-		if (str[i] != c)
-		{
-			str[j] = s[i];
-			i++;
-			j++;
-		}
-		while (str[i] == c )
-		{
-			if (ft_isrepeat(s + i, c) == 0)
-				{
-					str[j++] = '\0';
+		if (s[i] != c)
+			{
+				*(str + j) = s[i];
+				j++;
 				i++;
-				}
-			else
+			}
+		if (s[i] == c && ft_isrepeat(s + i, c) == 0)
+		{
+			str[j] = '\0';
+			j++;
+			i++;
+		}
+		else
+		{
 			str[j++] = '\0';
 			i += ft_isrepeat(s + i, c) + 1;
 		}
@@ -135,11 +151,14 @@ static	char	*ft_newstring(char const *s, char c)
 }
 int main (void)
 {
-	char *ptr = "kkkkkk";
+	char *ptr = "kakkakkkka";
 	char *str = ft_newstring(ptr, 'k');
-	int k = ft_newsize(ptr, 'a');
-	for (int t = 0; t < k+2; t++)
-		printf("%d\n",*(str + t));
+	int i = ft_newsize(ptr,'k');
+	printf("%d\n",i);
+	for (int t = 0; t < i+1+1; t++)
+		printf ("%d - %d\n",t,str[t]);
+
+
 }
 /*
 char	**ft_split(char const *s, char c)
