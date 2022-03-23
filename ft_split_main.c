@@ -1,13 +1,10 @@
 #include <libft.h>
 
-int	main(void)
+int main ()
 {
-	char **s;
-	char  *k;
-	k = "bonjour je m'appel ArthurS";
-
-	char a = 'o';
-	s = ft_split(k,a);
-	for (int t = 0; t < 16; t++)
-	printf("%d : '%s'\n",t, *(s+ t));
+	char **ptr;
+	char *str = "bonjour je m'appel Arthur";
+	ptr = ft_split(str,'o');
+	for (int t = 0; t < 8; t++)
+	printf("%s\n", *(ptr + t));
 }

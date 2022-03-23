@@ -141,7 +141,7 @@ static	char	*ft_newstring(char const *s, char c)
 			j++;
 			i++;
 		}
-		else
+		else if (s[i] == c)
 		{
 			str[j++] = '\0';
 			i += ft_isrepeat(s + i, c) + 1;
@@ -149,20 +149,64 @@ static	char	*ft_newstring(char const *s, char c)
 	}
 	return (str);
 }
-int main (void)
+/*int main (void)
 {
-	char *ptr = "kakkakkkka";
-	char *str = ft_newstring(ptr, 'k');
+	char *ptr = "bonjour je m'appel Arthur";
+	char *str = ft_newstring(ptr, 'o');
 	int i = ft_newsize(ptr,'k');
 	printf("%d\n",i);
-	for (int t = 0; t < i+1+1; t++)
+	for (int t = 0; t < i+2; t++)
 		printf ("%d - %d\n",t,str[t]);
 
 
 }
-/*
-char	**ft_split(char const *s, char c)
+*/
+static	size_t	ft_isnull(char *str, char const *s, char c)
 {
+	size_t	total;
+	size_t	i;
+	size_t	j;
+
+	total = 0;
+	j = ft_newsize(s,c) - 1;
+	i = 0;
+	while (i < j)
+	{
+		if (str[i] == '\0')
+			total++;
+		i++;
+	}
+	if (total != 0)
+		return (total + 1);
+	return (total);
 
 }
-*/
+char	**ft_split(char const *s, char c)
+{
+	char	**parr;
+	char	*str;
+	size_t	isnull;
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	str = ft_newstring(s, c);
+	isnull = ft_isnull(str,s,c);
+	parr = (char **) malloc (isnull + 1 * sizeof(char *));
+	if (!parr)
+		return (NULL);
+	parr[j++] = str;
+	while (isnull > 1)
+	{
+		if (str[i] == '\0')
+		{
+			parr[j++] = (str + 1+ i);
+			isnull--;
+		}
+		i++;
+	}
+	parr[j] = NULL;
+	return (parr);
+}
+
