@@ -134,6 +134,7 @@ static	char	*ft_cpy(char const *s1)
 	if (!str)
 		return (NULL);
 	ft_memcpy(str, s1, size);
+	return (str);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
