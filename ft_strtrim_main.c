@@ -2,8 +2,8 @@
 
 int	main (void)
 {
-	char s1[] = "burak";
-	char *set = "lpl";
+	char s1[13] = "123burak123";
+	char *set = "123";
 	char *str = ft_strtrim(s1,set);
 	printf("%s",str);
 }

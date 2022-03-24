@@ -80,14 +80,12 @@ static	char	*ft_trim_fnb(char const *s1, char const *set)
 	return (str);
 }
 
-static	char	*ft_trimmer(char const *s1, char const *set)
+static	char	*ft_trimmer(char const *s1, char const *set, size_t size)
 {
 	char	*str;
-	size_t	size;
 	size_t	ssize;
 	size_t	i;
 
-	size = ft_strlen(s1);
 	ssize = ft_strlen(set);
 	i = 0;
 	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
@@ -112,6 +110,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen(s1);
 	ssize = ft_strlen (set);
 	sum = ft_backset(s1, set) + ft_frontset(s1, set);
+	if (size <= ssize)
+		return (0);
 	if (sum == 0)
 	{
 		str = (char *) malloc ((size + 1) * sizeof(char));
@@ -120,9 +120,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ft_memcpy(str, s1, size);
 	}
 	if (sum == 5)
-		str = ft_trimmer(s1 + ssize, set);
+		str = ft_trimmer(s1 + ssize, set, size);
 	if (sum == 10)
-		str = ft_trimmer(s1, set);
+		str = ft_trimmer(s1, set, size);
 	if (sum == 15)
 		str = ft_trim_fnb(s1, set);
 	return (str);
