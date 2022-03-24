@@ -54,7 +54,7 @@ static	int	ft_frontset(char const *str, char const *set)
 	return (0);
 }
 
-static	char	*ft_trimFnB(char const *s1, char const *set)
+static	char	*ft_trim_fnb(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	size;
@@ -80,29 +80,7 @@ static	char	*ft_trimFnB(char const *s1, char const *set)
 	return (str);
 }
 
-static	char	*ft_trimF(char const *s1, char const *set)
-{
-	char	*str;
-	size_t	size;
-	size_t	ssize;
-	size_t	i;
-
-	size = ft_strlen(s1);
-	ssize = ft_strlen(set);
-	i = 0;
-	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
-	if (!str)
-		return (NULL);
-	while (i < (size - ssize))
-	{
-		str[i] = s1[i + ssize];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-static	char	*ft_trimE(char const *s1, char const *set)
+static	char	*ft_trimmer(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	size;
@@ -124,32 +102,28 @@ static	char	*ft_trimE(char const *s1, char const *set)
 	return (str);
 }
 
-static	char	*ft_cpy(char const *s1)
-{
-	char	*str;
-	size_t	size;
-
-	size = ft_strlen(s1) + 1;
-	str = (char *) malloc (size * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_memcpy(str, s1, size);
-	return (str);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		sum;
 	char	*str;
+	size_t	size;
+	size_t	ssize;
 
+	size = ft_strlen(s1);
+	ssize = ft_strlen (set);
 	sum = ft_backset(s1, set) + ft_frontset(s1, set);
 	if (sum == 0)
-		str = ft_cpy(s1);
+	{
+		str = (char *) malloc ((size + 1) * sizeof(char));
+		if (!str)
+			return (NULL);
+		ft_memcpy(str, s1, size);
+	}
 	if (sum == 5)
-		str = ft_trimF(s1, set);
+		str = ft_trimmer(s1 + ssize, set);
 	if (sum == 10)
-		str = ft_trimE(s1, set);
+		str = ft_trimmer(s1, set);
 	if (sum == 15)
-		str = ft_trimFnB(s1, set);
+		str = ft_trim_fnb(s1, set);
 	return (str);
 }
