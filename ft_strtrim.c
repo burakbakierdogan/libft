@@ -12,23 +12,132 @@
 
 #include <libft.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+static	int	ft_backset(char const *str, char const *set)
 {
+	size_t	i;
+	size_t	ssize;
+	size_t	size;
+	size_t	j;
+
+	j = 0;
+	i = 0;
+	ssize = ft_strlen(set);
+	size = ft_strlen(str) - ssize;
+	while (ssize > 0)
+	{
+		if (str[size++] == set[i++])
+			j++;
+		ssize--;
+	}
+	if (j == ft_strlen(set))
+		return (10);
+	return (0);
+}
+
+static	int	ft_frontset(char const *str, char const *set)
+{
+	size_t	ssize;
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	ssize = ft_strlen(set);
+	while (i < set)
+	{
+		if ( str[i] == set[i])
+			j++;
+		i++;
+	}
+	if (j == ssize)
+		return (5);
+	return (0);
+}
+
+static	char	*ft_trimFnB(char const *s1, char const *set)
+{
+	char	*str;
 	size_t	size;
 	size_t	ssize;
-	char *temp;
+	size_t	i;
+	size_t	j;
 
-	size = ft_strlen (s1);
-	ssize	= ft_strlen (set);
-	if (!(temp = (char *) malloc (sizeof(char) * size)))
+	size = ft_strlen(s1);
+	ssize = ft_strlen(set);
+	i = 0;
+	j = 0;
+	str = (char *) malloc ((size - (2 * ssize) + 1) *
+		sizeof (char));
+	if (!str)
 		return (NULL);
-	ft_memcpy(temp,s1,size+1);
-	if (ft_strncmp (temp, set, ssize) == 0)
-		temp = temp + ssize;
-	size = ft_strlen(temp);
-	if (ft_strncmp ((temp + size - ssize),set, ssize) == 0)
+	while (i < size - (2 * ssize))
 	{
-		temp[size - ssize] = '\0';
+		str[j] = s[j + ssize];
+		j++;
+		i++;
 	}
-	return (temp);
+	str[j] = '\0';
+	return (str);
+}
+
+static	char	*ft_trimF(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	size;
+	size_t	ssize;
+	size_t	i;
+
+	size = ft_strlen(s1);
+	ssize = ft_strlen(set);
+	i = 0;
+	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (i < (size - ssize))
+	{
+		str[i] = s1[i + ssize];
+		i++;
+	}
+	str[j] = '\0';
+	return (str);
+}
+
+static	char	*ft_trimE(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	size;
+	size_t	ssize;
+	size_t	i;
+
+	size = ft_strlen(s1);
+	ssize = ft_strlen(set);
+	i = 0;
+	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (i < size- ssize)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+static	char	*ft_cpy(char const *s1)
+{
+	char	*str;
+	size_t	size;
+
+	size = ft_strlen(s1) + 1;
+	str = (char *) malloc (size * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, size);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	
+
 }
