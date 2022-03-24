@@ -45,7 +45,7 @@ static	int	ft_frontset(char const *str, char const *set)
 	ssize = ft_strlen(set);
 	while (i < ssize)
 	{
-		if ( str[i] == set[i])
+		if (str[i] == set[i])
 			j++;
 		i++;
 	}
@@ -66,8 +66,8 @@ static	char	*ft_trim_fnb(char const *s1, char const *set)
 	ssize = ft_strlen(set);
 	i = 0;
 	j = 0;
-	str = (char *) malloc ((size - (2 * ssize) + 1) *
-		sizeof (char));
+	str = (char *) malloc ((size - (2 * ssize) + 1)
+			* sizeof (char));
 	if (!str)
 		return (NULL);
 	while (i < size - (2 * ssize))
@@ -93,7 +93,7 @@ static	char	*ft_trimmer(char const *s1, char const *set)
 	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	while (i < size- ssize)
+	while (i < size - ssize)
 	{
 		str[i] = s1[i];
 		i++;
