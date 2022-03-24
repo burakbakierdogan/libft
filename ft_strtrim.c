@@ -43,7 +43,7 @@ static	int	ft_frontset(char const *str, char const *set)
 	i = 0;
 	j = 0;
 	ssize = ft_strlen(set);
-	while (i < set)
+	while (i < ssize)
 	{
 		if ( str[i] == set[i])
 			j++;
@@ -72,7 +72,7 @@ static	char	*ft_trimFnB(char const *s1, char const *set)
 		return (NULL);
 	while (i < size - (2 * ssize))
 	{
-		str[j] = s[j + ssize];
+		str[j] = s1[j + ssize];
 		j++;
 		i++;
 	}
@@ -98,7 +98,7 @@ static	char	*ft_trimF(char const *s1, char const *set)
 		str[i] = s1[i + ssize];
 		i++;
 	}
-	str[j] = '\0';
+	str[i] = '\0';
 	return (str);
 }
 
@@ -115,7 +115,7 @@ static	char	*ft_trimE(char const *s1, char const *set)
 	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	while (i < size- ssize)
+	while (i < (size- ssize))
 	{
 		str[i] = s1[i];
 		i++;
@@ -138,6 +138,20 @@ static	char	*ft_cpy(char const *s1)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	
+	int		sum;
+	char	*str;
 
+	sum = ft_backset(s1, set) + ft_frontset(s1, set);
+	printf("%d\n",sum);
+	if (sum == 0)
+		str = ft_cpy(s1);
+	if (sum == 5)
+		str = ft_trimF(s1, set);
+	if (sum == 10)
+		str = ft_trimE(s1, set);
+	if (sum == 15)
+		str = ft_trimFnB(s1, set);
+	else
+		return (0);
+	return (str);
 }
