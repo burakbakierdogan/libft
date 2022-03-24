@@ -115,7 +115,7 @@ static	char	*ft_trimE(char const *s1, char const *set)
 	str = (char *) malloc ((size - ssize) + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	while (i < (size- ssize))
+	while (i < size- ssize)
 	{
 		str[i] = s1[i];
 		i++;
@@ -142,7 +142,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	sum = ft_backset(s1, set) + ft_frontset(s1, set);
-	printf("%d\n",sum);
 	if (sum == 0)
 		str = ft_cpy(s1);
 	if (sum == 5)
@@ -151,7 +150,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str = ft_trimE(s1, set);
 	if (sum == 15)
 		str = ft_trimFnB(s1, set);
-	else
-		return (0);
 	return (str);
 }
