@@ -12,7 +12,7 @@
 
 #include <libft.h>
 
-static	int ft_sizer(int n)
+static	int	ft_sizer(int n)
 {
 	int	i;
 	int	number;
@@ -34,10 +34,11 @@ static	int ft_sizer(int n)
 		return (i + 2);
 	return (i + 1);
 }
+
 static	char	*ft_putnbr(char *str, int n)
 {
 	int	index;
-	int number;
+	int	number;
 
 	number = n;
 	index = ft_sizer(n) - 1;
@@ -54,6 +55,7 @@ static	char	*ft_putnbr(char *str, int n)
 		str[0] = '-';
 	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -63,12 +65,12 @@ char	*ft_itoa(int n)
 	str = (char *) ft_calloc(size, sizeof(char));
 	if (n == -2147483648)
 	{
-		ft_strlcpy(str,"-2147483648", size);
+		ft_strlcpy(str, "-2147483648", size);
 		return (str);
 	}
 	if (n == 0)
 	{
-		ft_strlcpy(str, "0",size);
+		ft_strlcpy(str, "0", size);
 		return (str);
 	}
 	str = ft_putnbr(str, n);
