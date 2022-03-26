@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 10:21:23 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 10:22:48 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 14:08:06 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, unsigned char))
 {
 	unsigned int	i;
-	char	*str;
+	char			*str;
 
 	if (!s)
 		return (NULL);
@@ -31,4 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, unsigned char))
 	str[i] = '\0';
 	return (str);
 }
-

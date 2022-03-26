@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 02:26:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/21 15:39:36 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 13:54:55 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
-	if (!s || !(substr = (char *) malloc (sizeof(char) * (len + 1))))
+	substr = (char *) malloc (sizeof(char) * (len + 1));
+	if (!s || !substr)
 		return (NULL);
 	while (len--)
 	{

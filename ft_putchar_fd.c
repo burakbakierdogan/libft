@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:51:24 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/25 13:51:24 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 14:09:13 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c,1);
+	write (fd, &c, 1);
 }

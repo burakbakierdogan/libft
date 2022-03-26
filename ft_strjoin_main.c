@@ -3,7 +3,7 @@
 int main (void)
 {
 	char a[] = "burak";
-	char b[] = "bakierdogan";
+	char b[] = " baki erdogan";
 	char *str = ft_strjoin(a,b);
 	printf("%s",str);
 	free(str);
