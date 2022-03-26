@@ -48,21 +48,16 @@ static	int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i] == c)
-		i++;
-	if (!s[i])
-		return (0);
 	while (i < ft_strlen(s))
 	{
-		if (s[i] == c || s[i] == '\0')
-			{
-				j++;
-				i += ft_sizer(s + i + 1, c);
-			}
-		else
+		while (s[i] == c && s[i])
+			i++;
+		j++;
+		while (s[i] != c && s[i])
 			i++;
 	}
-	return (j + 1);
+	printf("%d\n",j);
+	return (j);
 }
 
 char	**ft_split(char const *s, char c)
@@ -74,9 +69,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	parr = ft_calloc(ft_wordcount(s, c), sizeof(char *));
-	int u = ft_wordcount(s,c);
-	printf ("%d\n",u);
+	parr = ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
 	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)
