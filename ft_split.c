@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] != c && i < ft_strlen(s))
 		{
 			parr[j++] = ft_new(s + i, c);
-			i += ft_sizer(s+ i, c);
+			i += ft_sizer(s + i, c);
 		}
 	}
 	parr[j] = NULL;
