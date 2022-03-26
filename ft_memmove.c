@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 22:40:25 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:59:22 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 17:02:19 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	int	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	if (dest == src && !n)
 		return (dest);
 	if (src < dest)
