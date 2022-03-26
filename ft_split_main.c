@@ -2,7 +2,7 @@
 
 int main ()
 {
-	char *src = "aaakaaakkakaakkakaak";
+	char *src = "bonjour je m'appel Arthur";
 	char **str = ft_split(src,'a');
 	for (int t = 0; t < 5; t++)
 	printf("%s\n", *(str + t));
