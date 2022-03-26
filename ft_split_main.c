@@ -2,9 +2,8 @@
 
 int main ()
 {
-	char **ptr;
-	char *str = "bonjour je m'appkdoapowapodkpaodkpaokwdpoakwpodkapowkdpaowkdpawpodawopdkawopkdpaowkdpaowkdpaowdpaokdpaowkpodkpoawkdpokawpodkapowkdpaowkdpaowkpdoawkopdkpopdpawokdpaowdpel Arthur";
-	ptr = ft_split(str,'o');
-	for (int t = 0; t < 8; t++)
-	printf("%s\n", *(ptr + t));
+	char *src = "aaakaaakkakaakkakaak";
+	char **str = ft_split(src,'a');
+	for (int t = 0; t < 5; t++)
+	printf("%s\n", *(str + t));
 }
