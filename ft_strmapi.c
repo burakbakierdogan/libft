@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 10:21:23 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:08:06 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:00:50 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, unsigned char))
 {

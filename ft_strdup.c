@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:33:33 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:15:35 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:00:03 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 12:24:38 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 11:17:30 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:00:27 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 08:17:54 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/10 08:17:54 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:01:27 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static	int	ft_backset(char const *str, char const *set)
 {

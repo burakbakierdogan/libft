@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:09:40 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/17 11:56:29 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 14:58:54 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static	int	ft_sizer(int n)
 {

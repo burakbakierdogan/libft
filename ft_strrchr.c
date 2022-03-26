@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 04:25:14 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 11:20:39 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:01:21 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

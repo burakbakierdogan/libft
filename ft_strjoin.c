@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 05:18:03 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:25:09 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:00:19 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
