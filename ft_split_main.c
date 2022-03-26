@@ -1,8 +1,19 @@
 #include <libft.h>
 
-int main ()
+
+int				main(void)
 {
-	char **str = ft_split("aaoaaooaoo",'o');
-	for (int t = 0; t < 5; t++)
-	printf("%s\n", *(str + t));
+	char	**tab;
+		unsigned int	i;
+
+	i = 0;
+	tab = ft_split("      split       this for   me  !", ' ');
+	if (!tab[0])
+		ft_putendl_fd("ok\n", 1);
+	while (tab[i] != NULL)
+	{
+		ft_putendl_fd(tab[i], 1);
+		i++;
+	}
 }
+
