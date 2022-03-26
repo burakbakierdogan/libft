@@ -58,14 +58,13 @@ static	int	ft_wordcount(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	*str;
 	char	**parr;
 	size_t	i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	if (s[i] == '\0')
+	if (s == NULL)
 		return (NULL);
 	parr = ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
 	while (i < ft_strlen(s))
