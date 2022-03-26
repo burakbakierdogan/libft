@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 05:18:03 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:05:38 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 14:25:09 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	k = 0;
 	i = 0;
 	total = (ft_strlen(s1) + ft_strlen(s2) + 1);
-	str = ft_calloc(total, sizeof(char));
+	str = (char *) ft_calloc(total, sizeof(char));
 	while (i < ft_strlen(s1))
 	{
 		str[i] = s1[i];

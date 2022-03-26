@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/21 16:11:31 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/26 14:24:35 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static	char	*ft_new(char const *s, char c)
 	j = 0;
 	i = 0;
 	k = ft_sizer(s, c);
-	str = ft_calloc (k, sizeof(char));
+	str = (char *) ft_calloc (k, sizeof(char));
 	while (s[i] && s[i] != c)
 			str[j++] = s[i++];
 	return (str);
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	if (s == NULL)
 		return (NULL);
-	parr = ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
+	parr = (char **) ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
 	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)
