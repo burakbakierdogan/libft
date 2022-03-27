@@ -33,6 +33,8 @@ static	char	*ft_new(char const *s, char c)
 	i = 0;
 	k = ft_sizer(s, c);
 	str = (char *) ft_calloc (k, sizeof(char));
+	if (str == NULL)
+		return (NULL);
 	while (s[i] && s[i] != c)
 			str[j++] = s[i++];
 	return (str);
@@ -67,6 +69,8 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	parr = (char **) ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
+	if (parr == NULL)
+		return (NULL);
 	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)

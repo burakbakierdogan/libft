@@ -8,7 +8,7 @@ int main(int argc, const char * argv[])
     char *ptr;
 
     /* Return a pointer to the first 'N' within the search string */
-    ptr = ft_memchr(search, 'N', strlen(search));
+    ptr = ft_memchr(search, 'N', ft_strlen(search));
 
     /* If 'N' was found, print its location (This should produce "10") */
     if (ptr != NULL) printf("Found 'N' at position %ld.\n", 1+(ptr-search));
