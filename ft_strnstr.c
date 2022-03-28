@@ -32,7 +32,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	size_t	k;
 	size_t	i;
-	int		j;
 
 	k = ft_strlen(needle);
 	if (k == 0)
@@ -40,12 +39,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	if (n == 0)
 		return (NULL);
 	i = 0;
-	j = 0;
 	while (haystack[i] && n--)
 	{
 		if (!ft_check(haystack + i, needle, k))
 			return ((char *) haystack + i);
 		i++;
 	}
-	return ((char *) NULL);
+	return (NULL);
 }
