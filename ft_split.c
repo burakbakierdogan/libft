@@ -22,6 +22,16 @@ static	int	ft_sizer(char const *s, char c)
 	return (i + 1);
 }
 
+static	int	ft_sizer2(char const *s, char c)
+{
+	int i;
+
+	i = 0;
+	while (s[i] == c)
+		i++;
+	return (i);
+}
+
 static	char	*ft_new(char const *s, char c)
 {
 	char	*str;
@@ -47,13 +57,18 @@ static	int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	while (s[i] != c)
+		i++;
 	while (i < ft_strlen(s))
 	{
-		while (s[i] == c && s[i])
-			i++;
-		j++;
-		while (s[i] != c && s[i])
-			i++;
+		if (s[i] == c)
+		{
+			j++;
+			i += ft_sizer2(s, c);
+			if (s[i] == '\0')
+				j--;
+		}
+		i++;
 	}
 	return (j);
 }
