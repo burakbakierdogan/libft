@@ -2,8 +2,8 @@
 
 int	main(void)
 {
-	char haystack[] = "burak baki erdogan";
-	char needle[] = "er";
-	char *sonuc = ft_strnstr(haystack,needle,20);
+	char haystack[] = "wadapakiawdawdawawdasdwawakikep";
+	char needle[] = "akiawdawdawawdasdwa";
+	char *sonuc = ft_strnstr(haystack,needle,0);
 	printf("%s",sonuc);
 }

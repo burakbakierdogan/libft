@@ -117,7 +117,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str = (char *) malloc ((size + 1) * sizeof(char));
 		if (!str)
 			return (NULL);
-		ft_memcpy(str, s1, size);
+		ft_memcpy(str, s1, ft_strlen(s1) + 1);
 	}
 	if (sum == 5)
 		str = ft_trimmer(s1 + ssize, set, size);
