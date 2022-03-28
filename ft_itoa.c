@@ -63,6 +63,8 @@ char	*ft_itoa(int n)
 
 	size = ft_sizer(n);
 	str = (char *) ft_calloc(size, sizeof(char));
+	if (!str)
+		return (NULL);
 	if (n == -2147483648)
 	{
 		ft_strlcpy(str, "-2147483648", size);

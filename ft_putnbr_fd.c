@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr4.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/03 08:55:48 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/14 11:36:38 by berdogan         ###   ########.fr       */
+/*   Created: 2022/03/28 03:03:53 by berdogan          #+#    #+#             */
+/*   Updated: 2022/03/28 03:03:53 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-	int	j;
-	int	t;
+	int	c;
 
-	i = -1;
-	j = 0;
-	t = 0;
-	if (!needle)
-		return ((char *)haystack);
-	while (++i < n)
+	c = 0;
+	if (n == -2147483648)
 	{
-		while (t < ft_strlen(needle))
-		{
-			if (haystack[j + i] == needle[j])
-				j++;
-			if (j == ft_strlen(needle))
-				return ((char *) &haystack[i]);
-			t++;
-		}
-		j = 0;
-		t = 0;
+		write (fd, "-2147483648", 11);
+		return ;
 	}
-	return (0);
+	if (n < 0)
+	{
+		n *= -1;
+		write (fd,"-", 1);
+	}
+	if (n < 10)
+	{
+		c = n + 48;
+		write (fd, &c, 1);
+		return ;
+	}
+	ft_putnbr_fd(n / 10, fd);
+	ft_putnbr_fd(n % 10, fd);
+	return ;
 }
