@@ -68,6 +68,8 @@ static	int	ft_wordcount(char const *s, char c)
 		}
 		i++;
 	}
+	if (s[0] != '\0' && j == 0)
+		return (1);
 	return (j);
 }
 
