@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/26 14:59:50 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:52:54 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,12 @@ static	int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i] != c)
-		i++;
 	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)
 		{
 			j++;
-			i += ft_sizer2(s, c);
+			i += ft_sizer2(s + i, c);
 			if (s[i] == '\0')
 				j--;
 		}
