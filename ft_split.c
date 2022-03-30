@@ -57,13 +57,18 @@ static	int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	while (s[i] == c)
+		i++;
+	j++;
+	if (s[i] == '\0' || s[0] == '\0')
+		return (0);
 	while (i < ft_strlen(s))
 	{
-		if (s[i] == c)
+		while (s[i] == c && i < ft_strlen(s))
 		{
 			j++;
 			i += ft_sizer2(s + i, c);
-			if (s[i] == '\0')
+			if (s[i] == '\0' && j != 0)
 				j--;
 		}
 		i++;
