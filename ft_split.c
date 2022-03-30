@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/29 17:52:54 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/30 15:44:41 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,6 @@ static	int	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i] == c)
-		i++;
-	j++;
-	if (s[i] == '\0' || s[0] == '\0')
-		return (0);
 	while (i < ft_strlen(s))
 	{
 		while (s[i] == c && i < ft_strlen(s))
@@ -73,8 +68,6 @@ static	int	ft_wordcount(char const *s, char c)
 		}
 		i++;
 	}
-	if (s[0] != '\0' && j == 0)
-		return (1);
 	return (j);
 }
 
@@ -86,8 +79,6 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
-		return (NULL);
 	parr = (char **) ft_calloc(ft_wordcount(s, c) + 1, sizeof(char *));
 	if (!parr)
 		return (NULL);
