@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 06:22:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/30 15:44:41 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:00:48 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static	int	ft_sizer(char const *s, char c)
 
 static	int	ft_sizer2(char const *s, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] == c)

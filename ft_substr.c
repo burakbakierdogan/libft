@@ -6,22 +6,22 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 02:26:51 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/29 17:09:59 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:03:49 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static	size_t	ft_sizer(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[start++] && len-- && s[i]) 
+	while (s[start++] && len-- && s[i])
 		i++;
 	return (i + 1);
 }
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
