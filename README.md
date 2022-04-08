@@ -9,3 +9,18 @@
         function works with signed numbers too. But there can only be one sign in front of the number.
 
 # ft_bzero (void *s, size_t n)
+        This function takes any type of adress
+        and it writes n bytes of '\0'.
+        there is no return value.
+
+# ft_calloc (size_t nmemb, size_t size)
+        Clear Allocation.
+        This Function uses stdlib malloc function
+        and returns given adresses filled with '\0'.
+
+# ft_isalnum (int c)
+        This functions checks whether given value contatins
+        digits or English characters. 
+        It returns true or false.
+
+        
