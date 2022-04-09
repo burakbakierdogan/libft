@@ -19,8 +19,7 @@
         and returns given adresses filled with '\0'.
 
 # ft_isalnum (int c)
-        This functions checks whether given value contatins
-        digits or English characters. 
-        It returns true or false.
+        This function checks whether given value contatins digits or English characters. 
+        It returns true or false value.
 
         
