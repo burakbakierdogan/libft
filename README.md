@@ -1,4 +1,4 @@
-# **********This is my own C library********** 
+# ********** This is my own C library ********** 
         It contains of string and memory functions.
         Most of the functions are reimplemantation of their originals.
 
