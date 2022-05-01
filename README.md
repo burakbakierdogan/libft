@@ -2,8 +2,7 @@
 # It contains of string and memory functions.
 # Most of the functions are reimplemantation of their originals.
 
-# ___________________FUNCTION DESCRIPTIONS__________________________________
-
+# ********** FUNCTION DESCRIPTIONS **********
 # ft_atoi (const char *nptr)
         ASCII to interger function.
         this function takes the first adress of the char array which represents a number
