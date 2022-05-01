@@ -21,5 +21,7 @@
 # ft_isalnum (int c)
         This function checks whether given value contatins digits or English characters. 
         It returns true or false value.
-
+# int	ft_isalpha(int c)
+        This function returns 1 if the given argument is alphabetical character of English.
+  
         
