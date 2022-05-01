@@ -1,6 +1,6 @@
-# This is my own C library. 
-# It contains of string and memory functions.
-# Most of the functions are reimplemantation of their originals.
+# **********This is my own C library********** 
+        It contains of string and memory functions.
+        Most of the functions are reimplemantation of their originals.
 
 # ********** FUNCTION DESCRIPTIONS **********
 # ft_atoi (const char *nptr)
