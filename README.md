@@ -2,7 +2,7 @@
 # It contains of string and memory functions.
 # Most of the functions are reimplemantation of their originals.
 
-#       FUNCTION DESCRIPTIONS
+#___________________FUNCTION DESCRIPTIONS__________________________________
 
 # ft_atoi (const char *nptr)
         ASCII to interger function.
