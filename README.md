@@ -38,5 +38,8 @@
         This function converts given integer number to the charecter.
         If there is whitespace in front of the number then it skips the whitespace
         it returns number as a string.
+# void	*ft_memchr(const void *s, int c, size_t n)
+        This function searches given int c value as an unsigned integer
+        it returns the adress of value if it is found otherwise it returns NULL.
         
         
