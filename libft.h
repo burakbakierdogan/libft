@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/09/26 15:19:20 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:30:44 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ typedef struct s_get
 	char	*str;
 	char	*rest;
 }	t_gnl;
+
+typedef struct s_list
+{
+	void	*content;
+	struct s_list *next;
+}	t_list;
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
@@ -82,4 +88,7 @@ int		ft_is_nl(char *str);
 char	*ft_append(char *str1, char *str2);
 char	*ft_move_rest(char *rest, char *to_free);
 t_gnl	ft_seperate(char *str, int j);
+int		ft_is_capital(char c);
+int		ft_is_space(char c);
+int		ft_atoi_base(char *str, int base);
 #endif
