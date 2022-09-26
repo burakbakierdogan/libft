@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/09/26 18:58:03 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:28:51 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,6 @@ int		ft_atoi_base(char *str, int base);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstadd(t_list *lst);
 #endif
