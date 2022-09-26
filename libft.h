@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/09/26 18:30:44 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:37:16 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_get
 	char	*str;
 	char	*rest;
 }	t_gnl;
-
 typedef struct s_list
 {
 	void	*content;
@@ -91,4 +90,5 @@ t_gnl	ft_seperate(char *str, int j);
 int		ft_is_capital(char c);
 int		ft_is_space(char c);
 int		ft_atoi_base(char *str, int base);
+t_list	*ft_lstnew(void *content);
 #endif
