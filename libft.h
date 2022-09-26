@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/03/30 16:47:06 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:19:20 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,23 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <limits.h>
+# include <stdarg.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <string.h>
+
+typedef struct s_get
+{
+	int		status;
+	char	*str;
+	char	*rest;
+}	t_gnl;
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
@@ -50,4 +67,19 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_printf(const char *src, ...);
+int		ft_itoa_base(unsigned long long int nbr, int base, char format);
+char	*get_next_line(int fd);
+char	*ft_str_merge(char *container, char *buf);
+char	*ft_container(int fd, char *container);
+char	*ft_ret_line(char *container);
+char	*ft_new_contaier(char *container);
+int		ft_strlenn(char *str);
+char	*ft_strchrr(char *s, int c);
+char	*get_next_line_bonus(int fd);
+int		ft_lenn(char *str);
+int		ft_is_nl(char *str);
+char	*ft_append(char *str1, char *str2);
+char	*ft_move_rest(char *rest, char *to_free);
+t_gnl	ft_seperate(char *str, int j);
 #endif

@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 05:10:18 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 00:47:00 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:59:16 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static	int	ft_check(const char *a, const char *b, size_t c, size_t n)
 	{
 		if (a[i] == b[i])
 			j--;
-		i++;
+			i++;
 	}
 	return (j);
 }
@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	k = ft_strlen(needle);
+		k = ft_strlen(needle);
 	if (n == 0)
 		return (NULL);
 	i = 0;
