@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/09/26 18:37:16 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:58:03 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,7 @@ t_gnl	ft_seperate(char *str, int j);
 int		ft_is_capital(char c);
 int		ft_is_space(char c);
 int		ft_atoi_base(char *str, int base);
+
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 #endif
