@@ -15,4 +15,5 @@
 void	ft_lstdelalone(t_list *lst, void (*del) (void *))
 {
 	del(lst-> content);
+	free(lst -> content);
 }
