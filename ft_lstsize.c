@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 19:20:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/09/26 19:23:33 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/10/03 02:26:48 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while(lst)
+	while (lst)
 	{
 		lst = lst -> next;
 		i++;
