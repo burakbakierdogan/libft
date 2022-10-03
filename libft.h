@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/10/03 02:26:13 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/10/03 03:42:14 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char	*ft_append(char *str1, char *str2);
 char	*ft_move_rest(char *rest, char *to_free);
 t_gnl	ft_seperate(char *str, int j);
 int		ft_is_capital(char c);
-int		ft_is_space(char c);
+int		ft_is_space(int c);
 int		ft_atoi_base(char *str, int base);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
