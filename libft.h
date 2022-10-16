@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:12:41 by berdogan          #+#    #+#             */
-/*   Updated: 2022/10/03 03:42:14 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/10/16 02:03:26 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ t_gnl	ft_seperate(char *str, int j);
 int		ft_is_capital(char c);
 int		ft_is_space(int c);
 int		ft_atoi_base(char *str, int base);
+int		ft_atoi_for_push_swap(const char *nptr);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -99,4 +100,7 @@ void	ft_lstdelone(t_list *lst, void (*del) (void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del) (void *));
+char	*ft_itoa_base_v2(int nbr, int base, char format);
+char	*ft_revstr(char *str);
+int		ft_max(int	*tab, int len);
 #endif
