@@ -10,7 +10,7 @@ ASCII to interger function. It takes string which contains numeric characters an
 It will read negative and positive signs too and it will stop reading when the function encounters a non numeric
 value. It will ignore whitespaces in the begining but the string must be started with numeric or sigh characters.
 return: it returns converter integer value.
---------------------------------------------------------------------------------------------------------------
+
 ft_atoi_base (char *str, int base);
 ASCII to inter function but also it has an option to convert numbers from different bases.
 It works from base to base 16 to base 2 integer values.
