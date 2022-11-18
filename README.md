@@ -72,4 +72,9 @@ return value: str string.
 ft_split(char const *s, char c); it takes an string and split them to different strings. The split character is determined by char c.
 return value: String arrays with ending with NULL pointer.
 
-ft_strchr(const char *s, int c);
+ft_strchr(const char *s, int c); it searches given character inside s string.
+return value: The adress of matching character inside s or if the characther is not found NULL.
+
+ft_strdup(const char *str); it copies given string to the heap allocated memory adress.
+return value: the adress of  new copied string.
+
