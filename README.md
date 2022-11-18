@@ -5,3 +5,32 @@ return: it returns converted integer value.
 
 ft_atoi_base (char *str, int base); ASCII to inter function but also it has an option to convert numbers from different bases. It works from base to base 16 to base 2 integer values. 
 return: converter integer value.
+
+ft_bzero(void *s, size_t n); Starting from given adress the function writes n bytes of '\0'character to the memory adress. 
+Return Value: void *s pointer.
+
+ft_calloc (size_t nmemb, size_t size); it allocates nmemb times of memory space in heap memory via malloc function and  it writes size bytes of '\0' characters.
+return value: allocated memory adress.
+
+ft_is_capital(char c); it returns 1 if the c character is a capital letter.
+return value: 1 or 0. 
+
+ft_is_space.c (char c); it checks whether the character c is white space character.
+return value: 1 if its true, 0 if it is false.
+
+ft_isascii.c (char c); it checks whether the character c is ASCII character.
+return value: 1 if its true, 0 if it is false.
+
+ft_isdigit.c (char c);  it checks whether the character c is a digit character.
+return value: 1 if its true, 0 if it is false.
+
+ft_isprint.c (char c); it checks whether the character c is a printable character.
+return value: 1 if its true, 0 if it is false.
+
+ft_itoa.c (int n); it takes an integer value and it convert the value as the character of a string.
+return value: the adress of the new created string.
+
+ft_itoa_base.c: this is an helper function for ft_printf. 
+
+ft_itoa_base_v2.c (int nbr, int base, char format); this function takes int value and convert it to any desired base with a format rule. The converted value is a string. It works between base 2 and base 16. The format identifier is 'X' or 'x'. If the format is 'X' then int 255 will be equal to FF, if the format identifer is 'x' then the string will be ff.
+return value: the adtess of newly created string.
