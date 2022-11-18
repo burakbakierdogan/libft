@@ -53,3 +53,23 @@ return value: the adress of dest value.
 ft_memset(void *s, int c, size_t n); writes n bytes of c value to the given adress byte by byte. 
 return value: void s adress.
 
+ft_printf(char *src, ...); please download and read ft_printf repository. https://github.com/burakbakierdogan/ft_printf
+
+ft_putchar_fd(char c, int fd); it writes char c to given file pointed by a file descriptor number.
+return: no return value.
+
+ft_putendl_fd(char *s, int fd); it copies s string to given file pointed by a file descriptor number. Also it adds newline character at the end of the string.
+return value: no return value.
+
+ft_putnbr_fd(int n, int fd); it convert int n value to string and then writes the string to given file pointed by a file descriptor number. 
+
+ft_putstr_fd(char *s, int fd); it copies s string to given file pointed by a file descriptor number.
+return value: no return value.
+
+ft_revstr(char *str); it reverse the string.
+return value: str string.
+
+ft_split(char const *s, char c); it takes an string and split them to different strings. The split character is determined by char c.
+return value: String arrays with ending with NULL pointer.
+
+ft_strchr(const char *s, int c);
