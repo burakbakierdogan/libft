@@ -1,4 +1,4 @@
-Use make command to create the library .a C library file. This is my own C library. I recoded variety of functions from unistd, stdio, string and stdlib libraries. They work as the original functions. I will use this library throughout the 42 Curcus. Below, i listed the function prototypes and their descriptions:
+Use make command to create the library named libft.a file. This is my own C library. I recoded variety of functions from unistd, stdio, string and stdlib libraries. They work as the original functions. I will use this library throughout the 42 Curcus. Below, i listed the function prototypes and their descriptions:
 
 ft_atoi (const char *nptr); ASCII to interger function. It takes string which contains numeric characters and convert them integer value. It will read negative and positive signs too and it will stop reading when the function encounters a non numeric value. It will ignore whitespaces in the begining but the string must be started with numeric or sigh characters. 
 return: it returns converted integer value.
