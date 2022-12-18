@@ -1,80 +1,123 @@
-Use make command to create the library named libft.a file. This is my own C library. I recoded variety of functions from unistd, stdio, string and stdlib libraries. They work as the original functions. I will use this library throughout the 42 Curcus. Below, i listed the function prototypes and their descriptions:
+Use make command to create the library named libft.a file. Make bonus for bonus functions. This is my own C library. I recoded variety of functions from unistd, stdio, string and stdlib libraries. They work as the original functions. I will use this library throughout the 42 Curcus. 
 
-ft_atoi (const char *nptr); ASCII to interger function. It takes string which contains numeric characters and convert them integer value. It will read negative and positive signs too and it will stop reading when the function encounters a non numeric value. It will ignore whitespaces in the begining but the string must be started with numeric or sigh characters. 
-return: it returns converted integer value.
+Here is a brief description of each of the functions you listed:
 
-ft_atoi_base (char *str, int base); ASCII to inter function but also it has an option to convert numbers from different bases. It works from base to base 16 to base 2 integer values. 
-return: converter integer value.
+ft_calloc: This function allocates memory for an array of nmemb elements of size bytes each and initializes all the bytes in the allocated memory to zero. It returns a pointer to the allocated memory, or NULL if the request for memory fails.
 
-ft_bzero(void *s, size_t n); Starting from given adress the function writes n bytes of '\0'character to the memory adress. 
-Return Value: void *s pointer.
+ft_bzero: This function sets the first n bytes of the memory area pointed to by s to zero.
 
-ft_calloc (size_t nmemb, size_t size); it allocates nmemb times of memory space in heap memory via malloc function and  it writes size bytes of '\0' characters.
-return value: allocated memory adress.
+ft_memset: This function fills the first n bytes of the memory pointed to by s with the constant byte c. It returns a pointer to the memory area s.
 
-ft_is_capital(char c); it returns 1 if the c character is a capital letter.
-return value: 1 or 0. 
+ft_memcpy: This function copies n bytes from memory area src to memory area dest. It returns a pointer to dest.
 
-ft_is_space(char c); it checks whether the character c is white space character.
-return value: 1 if its true, 0 if it is false.
+ft_memmove: This function copies n bytes from memory area src to memory area dest, where the memory areas may overlap. It returns a pointer to dest.
 
-ft_isascii(char c); it checks whether the character c is ASCII character.
-return value: 1 if its true, 0 if it is false.
+ft_memchr: This function searches for the first occurrence of the byte c (converted to an unsigned char) in the first n bytes of the memory area pointed to by s. It returns a pointer to the matching byte, or NULL if the byte is not found.
 
-ft_isdigit(char c);  it checks whether the character c is a digit character.
-return value: 1 if its true, 0 if it is false.
+ft_strdup: This function allocates sufficient memory for a copy of the string str, copies the string into the newly allocated memory, and returns a pointer to it. If the request for memory fails, it returns NULL.
 
-ft_isprint(char c); it checks whether the character c is a printable character.
-return value: 1 if its true, 0 if it is false.
+ft_strncmp: This function compares the first n characters of the strings s1 and s2. It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2.
 
-ft_itoa(int n); it takes an integer value and it convert the value as the character of a string.
-return value: the adress of the new created string.
+ft_isalpha: This function checks if the given character c is an alphabetic character (i.e., a letter of the alphabet). It returns a non-zero value (i.e., true) if c is an alphabet, and 0 (i.e., false) otherwise.
 
-ft_itoa_base: this is an helper function for ft_printf. 
+ft_isdigit: This function checks if the given character c is a digit (i.e., a number between 0 and 9). It returns a non-zero value (i.e., true) if c is a digit, and 0 (i.e., false) otherwise.
 
-ft_itoa_base_v2(int nbr, int base, char format); this function takes int value and convert it to any desired base with a format rule. The converted value is a string. It works between base 2 and base 16. The format identifier is 'X' or 'x'. If the format is 'X' then int 255 will be equal to FF, if the format identifer is 'x' then the string will be ff.
-return value: the adtess of newly created string.
+ft_isalnum: This function checks if the given character c is an alphabetic character or a digit. It returns a non-zero value (i.e., true) if c is an alphabet or a digit, and 0 (i.e., false) otherwise.
 
-ft_max(int	*tab, int len); it takes an integers array and find the biggest number in the array.
-return value: the biggest int value.
+ft_isascii: This function checks if the given character c is an ASCII character. It returns a non-zero value (i.e., true) if c is an ASCII character, and 0 (i.e., false) otherwise.
 
-ft_memchr(const void *s, int c, size_t n); it searches character c byte by byte from the start of given adress. It searches n bytes of memory adress.
-return value: if the character is not found NULL is returned otherwise it returns the adress of first matching character in the string.
+ft_isprint: This function checks if the given character c is a printable character (i.e., a character).
+ft_toupper: This function converts the given character c to its uppercase equivalent if c is a lowercase alphabet. If c is already an uppercase alphabet or is not an alphabet, it returns c unchanged.
 
-ft_memcmp(const void *s1, const void *s2, size_t n); compares n bytes of 2 memory adresses till there is a difference.
-return value: if there is no difference then it returns 0. If there is a difference it returns s1[i] - s2[i] difference.
+ft_tolower: This function converts the given character c to its lowercase equivalent if c is an uppercase alphabet. If c is already a lowercase alphabet or is not an alphabet, it returns c unchanged.
 
-ft_memcpy(void *dest, void const *src, size_t n); it copies n bytes of src data to the dest adress. 
-return value: the adress of dest value.
+ft_strlen: This function calculates the length of the string s, excluding the null terminator. It returns the length of the string as a size_t value.
 
-ft_memmove(void *dest, const void *src, size_t n); when there is a memory overlapping memmove does the job of memcpy function.
-return value: the adress of dest value.
+ft_strlcpy: This function copies the string src (including the null terminator) to the buffer pointed to by dest, up to a maximum of n - 1 bytes, and then adds a null terminator. It returns the length of src.
 
-ft_memset(void *s, int c, size_t n); writes n bytes of c value to the given adress byte by byte. 
-return value: void s adress.
+ft_strlcat: This function appends the string src to the end of dest, up to a maximum of n - strlen(dest) - 1 bytes, and then adds a null terminator. It returns the initial length of dest plus the length of src.
 
-ft_printf(char *src, ...); please download and read ft_printf repository. https://github.com/burakbakierdogan/ft_printf
+ft_atoi: This function converts the initial portion of the string nptr to an integer. It skips any leading whitespace characters, then takes as many characters as possible that are part of the integer, and converts them to an integer value. It returns the integer value.
 
-ft_putchar_fd(char c, int fd); it writes char c to given file pointed by a file descriptor number.
-return: no return value.
+ft_strnstr: This function searches for the first occurrence of the null-terminated string needle in the string haystack, where not more than n characters are searched. It returns a pointer to the beginning of the located string, or NULL if the string is not found.
 
-ft_putendl_fd(char *s, int fd); it copies s string to given file pointed by a file descriptor number. Also it adds newline character at the end of the string.
-return value: no return value.
+ft_memcmp: This function compares the first n bytes of the memory areas s1 and s2. It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2.
 
-ft_putnbr_fd(int n, int fd); it convert int n value to string and then writes the string to given file pointed by a file descriptor number. 
+ft_strchr: This function searches for the first occurrence of the character c (converted to a char) in the string s. It returns a pointer to the located character, or NULL if the character is not found.
 
-ft_putstr_fd(char *s, int fd); it copies s string to given file pointed by a file descriptor number.
-return value: no return value.
+ft_substr: This function extracts a substring from the string s, starting at index start and with a length of len characters. It returns a newly allocated string containing the extracted substring, or an empty string if the requested substring is not valid.
 
-ft_revstr(char *str); it reverse the string.
-return value: str string.
+ft_strjoin: This function concatenates the strings s1 and s2, and returns a newly allocated string containing the result.
 
-ft_split(char const *s, char c); it takes an string and split them to different strings. The split character is determined by char c.
-return value: String arrays with ending with NULL pointer.
+ft_itoa: This function converts the integer n to a null-terminated string and returns the result.
 
-ft_strchr(const char *s, int c); it searches given character inside s string.
-return value: The adress of matching character inside s or if the characther is not found NULL.
+ft_strtrim: This function removes any leading or trailing characters from the string s1 that are in the set of characters specified in set, and returns a newly allocated string containing the resulting string.
 
-ft_strdup(const char *str); it copies given string to the heap allocated memory adress.
-return value: the adress of  new copied string.
+ft_strrchr: This function searches for the last occurrence of the character c (converted to a char) in the string s. It returns a pointer to the located character, or NULL if the character is not found.
 
+ft_split: This function splits the string s into an array of strings using the delimiter character c as the separator. It returns a newly allocated array of strings, or NULL if the allocation fails.
+
+ft_striteri: This function applies the function f to each character of the string s and its index, starting from zero.
+
+ft_putchar_fd: This function outputs the character c to the file descriptor fd.
+
+ft_putstr_fd: This function outputs the string s to the file descriptor fd.
+
+ft_putendl_fd: This function outputs the string s followed by a newline character to the file descriptor fd.
+
+ft_putnbr_fd: This function outputs the integer n to the file descriptor fd.
+
+ft_strmapi: This function applies the function f to each character of the string s and its index, starting from zero, and creates a new string with the resulting characters. It returns the newly allocated string, or NULL if the allocation fails.
+
+ft_printf: This function is a variable-argument function that formats and outputs a string according to the specified format. It returns the number of characters output.
+
+ft_itoa_base: This function converts the integer nbr to a null-terminated string in the specified base and returns the result.
+
+get_next_line: This function reads a line from a file descriptor, where a line is defined as a sequence of characters terminated by a newline character or the end of the file. It returns the line as a newly allocated string, or NULL if the end of the file is reached or if an error occurs.
+
+ft_str_merge: This function concatenates the string buf to the end of container and returns the resulting string.
+
+ft_container: This function reads from the file descriptor fd into the string container until a newline character or the end of the file is reached. It returns the modified container.
+
+ft_ret_line: This function extracts the first line from the string container, where a line is defined as a sequence of characters terminated by a newline character. It returns the line as a newly allocated string, and modifies container to contain the remaining characters.
+
+ft_new_contaier: This function creates a new string with the same content as the string container, and returns a pointer to the new string.
+
+ft_strlenn: This function calculates the length of the string str, including the null terminator. It returns the length of the string as an integer.
+ft_strchrr: This function searches for the last occurrence of the character c (converted to a char) in the string s. It returns a pointer to the located character, or NULL if the character is not found.
+
+get_next_line_bonus: This function reads a line from a file descriptor
+ft_lenn: This function calculates the length of the string str, including the null terminator. It returns the length of the string as an integer.
+
+ft_is_nl: This function checks if the string str contains a newline character. It returns a non-zero value (i.e., true) if str contains a newline character, and 0 (i.e., false) otherwise.
+
+ft_append: This function concatenates the string str2 to the end of str1, and returns a pointer to the resulting string.
+
+ft_move_rest: This function copies the remaining characters from the string rest to the string to_free, and returns a pointer to the resulting string.
+
+ft_seperate: This function extracts the first line from the string str, where a line is defined as a sequence of characters terminated by a newline character, and returns a structure containing the line and the remaining characters.
+
+ft_is_capital: This function checks if the given character c is an uppercase alphabet. It returns a non-zero value (i.e., true) if c is an uppercase alphabet, and 0 (i.e., false) otherwise.
+
+ft_is_space: This function checks if the given character c is a whitespace character (i.e., a space, a tab, a newline, etc.). It returns a non-zero value (i.e., true) if c is a whitespace character, and 0 (i.e., false) otherwise.
+
+ft_atoi_base: This function converts the string str to an integer in the specified base. It returns the integer value.
+
+ft_atoi_for_push_swap: This function converts the initial portion of the string nptr to an integer. It skips any leading whitespace characters and any leading + or - signs, then takes as many characters as possible that are part of the integer, and converts them to an integer value. It returns the integer value.
+
+ft_lstnew: This function creates a new list node and initializes its content with the given value. It returns a pointer to the new node, or NULL if the allocation fails.
+
+ft_lstadd_front: This function adds the given node new at the beginning of the list pointed to by lst.
+
+ft_lstsize: This function returns the number of nodes in the list pointed to by lst.
+
+ft_lstlast: This function returns a pointer to the last node of the list pointed to by lst.
+
+ft_lstadd_back: This function adds the given node new at the end of the list pointed to by lst.
+ft_lstdelone: This function frees the memory of the given node lst, and sets its content and next pointer to NULL.
+
+ft_lstclear: This function frees the memory of all the nodes in the list pointed to by lst, and sets the list pointer to NULL.
+
+ft_lstiter: This function applies the function f to each element of the list pointed to by lst.
+
+ft_lstmap: This function applies the function f to each element of the list pointed to by lst, and creates a new list with the resulting elements. It returns the newly created list, or NULL if the allocation fails.
