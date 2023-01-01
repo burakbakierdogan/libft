@@ -1,6 +1,6 @@
 Use make command to create the library named libft.a file. Make bonus for bonus functions. This is my own C library. I recoded variety of functions from unistd, stdio, string and stdlib libraries. They work as the original functions. I will use this library throughout the 42 Curcus. 
 
-Here is a brief description of each of the functions you listed:
+Here is a brief description of each of the functions listed:
 
 ft_calloc: This function allocates memory for an array of nmemb elements of size bytes each and initializes all the bytes in the allocated memory to zero. It returns a pointer to the allocated memory, or NULL if the request for memory fails.
 
